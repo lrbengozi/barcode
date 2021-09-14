@@ -1,10 +1,9 @@
-
-import { Request, Response } from "express";
+import { Request, Response } from 'express'
 
 class GetStatus {
-    async handle(request: Request, response: Response) {
-    return response.json({ message: "ok" });
+  async handle(request: Request, response: Response) {
+    return response.json({ message: 'ok' })
   }
 }
 
-export default new GetStatus;
+export default new GetStatus()

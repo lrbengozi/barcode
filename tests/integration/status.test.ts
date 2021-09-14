@@ -1,7 +1,7 @@
 import request from "supertest";
 import app from "../../src/app";
 
-describe("Authentication", () => {
+describe("GET /status - Success", () => {
   it("should return status code 200", async () => {
     const response = await request(app)
       .get("/status")
