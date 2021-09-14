@@ -39,4 +39,12 @@ describe('GET /boleto - FAIL', () => {
 
     expect(response.body.message).toBe('Linha digitável invalida')
   })
+
+  it('should be return type error message', async () => {
+    const response = await request(app).get(
+      '/boleto/teste'
+    )
+
+    expect(response.body.message).toBe("Deve ser informado apenas numeros!")
+  })
 })
