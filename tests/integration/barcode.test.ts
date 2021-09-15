@@ -21,6 +21,17 @@ describe('GET /boleto - Success', () => {
       '21299758700000020000001121100012100447561740'
     )
   })
+
+  it('should return amount, expirationDate, barCode ', async () => {
+    const response = await request(app).get(
+      '/boleto/836200000005974201110000001010202115852745430094'
+    )
+
+    expect(response.body.amount).toBe('97,42')
+    expect(response.body.barCode).toBe(
+      '83620000000974201110000010102021185274543009'
+    )
+  })
 })
 
 describe('GET /boleto - FAIL', () => {
