@@ -32,7 +32,7 @@ describe('GET /boleto - FAIL', () => {
     expect(response.status).toBe(400)
   })
 
-  it('should return amount, expirationDate, barCode ', async () => {
+  it('should be return error message', async () => {
     const response = await request(app).get(
       '/boleto/21290001111110001210904475617405975870000002000'
     )
